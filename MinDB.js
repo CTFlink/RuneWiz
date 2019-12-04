@@ -23,6 +23,7 @@ var sql = "CREATE TABLE IF NOT EXISTS runes (name VARCHAR(255), lvlreq INT, wpne
     console.log("Table created");
   });
 
+  
   var sql = "INSERT INTO runes (name, lvlreq, wpneffect, armeffect) VALUES ?";
   var values = [
     ['El', 11, '+50 To Attack Rating, +1 Light Radius', '+15 Defense, +1 To Light Radius'],
@@ -38,7 +39,7 @@ var sql = "CREATE TABLE IF NOT EXISTS runes (name VARCHAR(255), lvlreq INT, wpne
     ['Amn', 25, '7% Life Stolen Per Hit', 'Attacker Takes Damage of 14'],
     ['Sol', 27, '+9 To Minimum Damage', 'Damage Reduced By 7'],
     ['Shael', 29, '20% Increased Attack Speed', '20% Faster Hit Recovery/20% Faster Block Rate(Shields)'],
-    ['Dol', 31, 'Hit Causes Monster To Flee 25%', 'Replenish Life +7']
+    ['Dol', 31, 'Hit Causes Monster To Flee 25%', 'Replenish Life +7'],
     ['Hel', 0, 'Requirements -20%', 'Requirements -15%'],
     ['Io', 35, '+10 To Vitality', '+10 To Vitality'],
     ['Lum', 37, '+10 To Energy', '+10 To Energy'],
@@ -52,7 +53,7 @@ var sql = "CREATE TABLE IF NOT EXISTS runes (name VARCHAR(255), lvlreq INT, wpne
     ['Gul', 53, '20% Bonus To Attack Rating', '5% To Maximum Poison Resist'],
     ['Vex', 55, '7% Mana Stolen Per Hit', '5% To Maximum Fire Resist'],
     ['Ohm', 57, '+50% Enhanced Damage', '5% To Maximum Cold Resist'],
-    ['Lo', 59, '20% Deadly Strike', '5% To Maximum Lightning Resist']
+    ['Lo', 59, '20% Deadly Strike', '5% To Maximum Lightning Resist'],
     ['Sur', 61, 'Hit Blinds Target', 'Maximum Mana 5%/+50 To Mana (Shields)'],
     ['Ber', 63, '20% Chance of Crushing Blow', 'Damage Reduced by 8%'],
     ['Jah', 65, 'Ignore Targets Defense', 'Increase Maximum Life 5%/+50 Life (Shields)'],
