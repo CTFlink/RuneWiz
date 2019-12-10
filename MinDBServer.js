@@ -1,7 +1,4 @@
-var {runeValues} = require('./data.js')
-var {insertRunes} = require('./data.js')
-
-//console.log(runeValues);
+const data = require('./data.js');
 
 var mysql = require('mysql');
 
@@ -29,7 +26,9 @@ var sql = "CREATE TABLE IF NOT EXISTS runes (name VARCHAR(255), lvlreq INT, wpne
   });
 
   //Inserting rune values into database
-  con.query(insertRunes, [runeValues], function (err, result) {
+  var insertRunes = "INSERT INTO runes (name, lvlreq, wpneffect, armeffect) VALUES ?";
+
+  con.query(insertRunes, [data.runeValues], function (err, result) {
     if (err) throw err;
     console.log("Number of records inserted: " + result.affectedRows);
   });
@@ -37,3 +36,5 @@ var sql = "CREATE TABLE IF NOT EXISTS runes (name VARCHAR(255), lvlreq INT, wpne
   function visHej(){
     alertNumber("hej")
   };
+
+//console.log(data.exporttest);

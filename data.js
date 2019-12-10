@@ -1,8 +1,3 @@
-module.export = {runeValues};
-module.export = {insertRunes};
-
-
-var insertRunes = "INSERT INTO runes (name, lvlreq, wpneffect, armeffect) runeValues ?";
 var runeValues = [
   ['El', 11, '+50 To Attack Rating, +1 Light Radius', '+15 Defense, +1 To Light Radius'],
   ['Eld', 11, '+75% Damage To Undead, +50 Attack Rating Against Undead', '15% Slower Stamina Drain/7% Increased Chance of Blocking(Shields)'],
@@ -39,3 +34,6 @@ var runeValues = [
   ['Zod', 69, 'Indestructible', 'Indestructible']
 ];
 
+//var exporttest = "export test data";
+
+module.exports = {exporttest, runeValues}; 
