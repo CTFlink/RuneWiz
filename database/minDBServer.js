@@ -15,8 +15,6 @@ con.connect(function(err) {
   console.log("Connected!");
 });
 
-
-
 con.query("CREATE DATABASE IF NOT EXISTS runewords", function (err, result) {
   if (err) throw err;
   console.log("Database created");
