@@ -7,12 +7,13 @@ for at køre serveren uden nodemon skriv
 npm run start
 */
 
-
 const express = require('express');
 const path = require('path');
+const PORT = process.env.PORT || 5000;
 const data = require('./database/data.js');
 const logger = require('./middleware/logger');
 const app = express();
+const moment = require('moment');
 
 
 //Her initialiserer jeg middlewaren
@@ -32,7 +33,5 @@ app.use(express.static(path.join(__dirname, 'public')));
 // app.get ('/', (req, res) => {
 // res.sendFile(path.join(__dirname, 'public', 'index.html'));
 // });
-
-const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => console.log(`Server started on Port ${PORT} `));

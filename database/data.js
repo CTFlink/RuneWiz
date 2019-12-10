@@ -34,7 +34,4 @@ const runeValues = [
   ['Zod', 69, 'Indestructible', 'Indestructible']
 ];
 
-
-//console.log(JSON.stringify({ runeValues }));
-
-module.exports = runeValues; 
+module.exports = {runeValues}; 
