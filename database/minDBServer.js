@@ -2,6 +2,7 @@ const data = require('./data.js');
 
 var mysql = require('mysql');
 
+//Connect to database
 var con = mysql.createConnection({
   host: "localhost",
   user: "root",
@@ -13,6 +14,8 @@ con.connect(function(err) {
   if (err) throw err;
   console.log("Connected!");
 });
+
+
 
 con.query("CREATE DATABASE IF NOT EXISTS runewords", function (err, result) {
   if (err) throw err;
