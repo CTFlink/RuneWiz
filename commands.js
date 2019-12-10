@@ -1,3 +1,3 @@
-function alertOne( ) {
-    alertNumber( "one" );
+  function alertNumber( n ) {
+    alert( n );
 };

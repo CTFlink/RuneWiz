@@ -64,7 +64,3 @@ var sql = "CREATE TABLE IF NOT EXISTS runes (name VARCHAR(255), lvlreq INT, wpne
     if (err) throw err;
     console.log("Number of records inserted: " + result.affectedRows);
   });
-
-  function alertNumber( n ) {
-    alert( n );
-};
