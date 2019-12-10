@@ -11,14 +11,9 @@ npm run start
 const express = require('express');
 const path = require('path');
 const data = require('./database/data.js');
+const logger = require('./middleware/logger');
 const app = express();
 
-//middleware tager altid imod req, res, og next
-//
-const logger = (req, res, next) => {
-    console.log('hello');
-    next();
-}
 
 //Her initialiserer jeg middlewaren
 app.use(logger);
