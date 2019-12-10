@@ -1,4 +1,6 @@
-import {runeValues, insertRunes} from 'data.js' ;
+var {runeValues} = require('./data.js')
+var {insertRunes} = require('./data.js')
+
 //console.log(runeValues);
 
 var mysql = require('mysql');
