@@ -36,4 +36,6 @@ var runeValues = [
 
 //var exporttest = "export test data";
 
+//console.log(JSON.stringify({ runeValues }));
+
 module.exports = {runeValues}; 
