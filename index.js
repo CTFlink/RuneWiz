@@ -10,29 +10,24 @@ npm run start
 
 const express = require('express');
 const path = require('path');
-//const data = require('./data.js');
+const data = require('./database/data.js');
 const app = express();
 
-//dette er midlertidig hardcoded data der skal erstattes med det jeg vil vise.
-const members = [
-    {
-        id: 1,
-        name: 'John',
-        email: 'John@mail.com',
-        status: 'active'
-    },
-    {
-        id: 2,
-        name: 'Sven',
-        email: 'Sven@mail.com',
-        status: 'inactive'
-    }
-];
+//middleware tager altid imod req, res, og next
+//
+const logger = (req, res, next) => {
+    console.log('hello');
+    next();
+}
 
-app.get('/api/members', (req, res) => {
-    res.json(members);
+//Her initialiserer jeg middlewaren
+app.use(logger);
+
+
+//denne route henter Runerne 
+app.get('/api/runes', (req, res) => {
+    res.json(data.runeValues);
 });
-
 
 //Dette bruges til at sætte en static folder til middleware løsninger
 app.use(express.static(path.join(__dirname, 'public')));

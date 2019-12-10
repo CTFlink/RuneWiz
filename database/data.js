@@ -1,4 +1,20 @@
-var runeValues = [
+//dette er midlertidig hardcoded data der skal erstattes med det jeg vil vise.
+const members = [
+    {
+        id: 1,
+        name: 'John',
+        email: 'John@mail.com',
+        status: 'active'
+    },
+    {
+        id: 2,
+        name: 'Sven',
+        email: 'Sven@mail.com',
+        status: 'inactive'
+    }
+];
+
+const runeValues = [
   ['El', 11, '+50 To Attack Rating, +1 Light Radius', '+15 Defense, +1 To Light Radius'],
   ['Eld', 11, '+75% Damage To Undead, +50 Attack Rating Against Undead', '15% Slower Stamina Drain/7% Increased Chance of Blocking(Shields)'],
   ['Tir', 13, '+2 To Mana After Each Kill', '+2 To Mana After Each Kill'],
@@ -38,4 +54,5 @@ var runeValues = [
 
 //console.log(JSON.stringify({ runeValues }));
 
-module.exports = {runeValues}; 
+module.exports = runeValues; 
+module.exports = members; 
