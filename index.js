@@ -25,7 +25,8 @@ app.get('/api/runes', (req, res) => {
     res.json(data.runeValues);
 });
 
-//Dette bruges til at sætte en static folder til middleware løsninger
+
+//Dette bruges til at sætte en static folder så middleware løsninger fungerer
 app.use(express.static(path.join(__dirname, 'public')));
 
 
