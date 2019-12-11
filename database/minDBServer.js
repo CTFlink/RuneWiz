@@ -20,14 +20,14 @@ con.query("CREATE DATABASE IF NOT EXISTS runewords", function (err, result) {
   console.log("Database created");
 });
 
-var sql = "CREATE TABLE IF NOT EXISTS runes (name VARCHAR(255), lvlreq INT, wpneffect VARCHAR(255), armeffect VARCHAR(255))";
+var sql = "CREATE TABLE IF NOT EXISTS runes (name VARCHAR(255), lvlreq INT, wpneffect VARCHAR(255), armeffect VARCHAR(255), selected INT)";
   con.query(sql, function (err, result) {
     if (err) throw err;
     console.log("Table created");
   });
 
   //Inserting rune values into database
-  var insertRunes = "INSERT INTO runes (name, lvlreq, wpneffect, armeffect) VALUES ?";
+  var insertRunes = "INSERT INTO runes (name, lvlreq, wpneffect, armeffect, selected) VALUES ?";
 
   con.query(insertRunes, [data.runeValues], function (err, result) {
     if (err) throw err;
