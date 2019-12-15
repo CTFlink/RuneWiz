@@ -4,6 +4,7 @@ var createDB = "CREATE DATABASE IF NOT EXISTS runewords"
 var createTable = "CREATE TABLE IF NOT EXISTS runes (name VARCHAR(255), lvlreq INT, wpneffect VARCHAR(255), armeffect VARCHAR(255), selected INT)";
 var insertRunes = "INSERT INTO runes (name, lvlreq, wpneffect, armeffect, selected) VALUES ?";
 var selectRunes = "SELECT * from runes";
+var dropDataB = 'DROP DATABASE runewords';
 
 
 //Connect to database
@@ -19,12 +20,12 @@ con.connect(function(err) {
   console.log("Connected!");
 });
 
-con.query(createDB, function (err, result) {
+con.query(createDB, function (err) {
   if (err) throw err;
   console.log("Database created");
 });
 
-con.query(createTable, function (err, result) {
+con.query(createTable, function (err) {
   if (err) throw err;
   console.log("Table created");
 });
@@ -55,12 +56,12 @@ con.query(selectRunes, function (err, result) {
 });
 
 //Drop db
-function dropDB(){ 
-  con.query('DROP DATABASE [IF EXISTS] runes', function (err, result) {
-    if (err) throw err;
-    });
-    console.log("Databasen er slettet!")
-}
+
+  // con.query(dropDataB, function (err, result) {
+  //   if (err) throw err;
+  //   });
+  //   console.log("Databasen er slettet!")
+
 
 //Create an object to save current row's data
 
